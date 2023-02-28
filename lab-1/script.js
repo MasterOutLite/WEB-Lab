@@ -1,17 +1,21 @@
 // Your custom Reduce
-const reduce = (arr, fn, initialValue) => {
+const reduce = (arrs, fn, initialValue) => {
   // Your implementation
-  for (let item of arr) {
-    initialValue = fn(initialValue, item);
-  }
+  const replace = (arr, index, fn) => {
+    if (index == arr.length - 1) {
+      return arr[index];
+    } else {
+      return fn(arr[index], replace(arr, index + 1, fn));
+    }
+  };
 
-  return initialValue;
+  return replace(arr, 0, fn) + initialValue;
 };
 
 // Inputs
 const arr = [1, 2, 3, 4];
 const sum = (accumulator, val) => accumulator + val;
-const initialValue = 0;
+const initialValue = 1;
 
 // Generating the Sums
 const sum01 = arr.reduce(sum, initialValue); // Plain JS Reduce
