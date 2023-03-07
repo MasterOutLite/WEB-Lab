@@ -1,15 +1,16 @@
 // Your custom Reduce
 const reduce = (arrs, fn, initialValue) => {
   // Your implementation
-  const replace = (arr, index, fn) => {
-    if (index == arr.length - 1) {
-      return arr[index];
-    } else {
-      return fn(arr[index], replace(arr, index + 1, fn));
+  const replace = (index) => {
+    const value = arrs[index];
+    if (index === arrs.length - 1) {
+      return fn(value, initialValue);
     }
+    
+    return fn(value, replace(index + 1));
   };
 
-  return replace(arr, 0, fn) + initialValue;
+  return replace(0);
 };
 
 // Inputs
