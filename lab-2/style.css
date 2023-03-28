@@ -1,0 +1,153 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.page {
+  padding: 60px 30px;
+  background-color: bisque;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.m-center {
+  margin: 0 auto;
+}
+
+.box {
+  max-width: 1000px;
+  width: 100%;
+  height: 600px;
+  margin: 80px auto;
+}
+
+.p-wrap {
+  padding: 15px;
+}
+
+.padding {
+  padding: 0 90px;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.bg-blue {
+  background-color: rgb(12, 122, 249);
+}
+
+.bg-yellow {
+  background-color: yellow;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.bg-red {
+  background-color: red;
+}
+
+.element {
+  border: 3px solid black;
+  background-color: rgb(12, 122, 249);
+}
+
+.grid {
+  padding: 15px;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 100px 35% 35%;
+  grid-template-rows: 100px 200px 200px 100px;
+  gap: 10px;
+  grid-template-areas:
+    "a b b "
+    "a d d "
+    "a d d "
+    "a g g ";
+}
+
+.element-a {
+  grid-area: a;
+  background-color: yellow;
+}
+
+.element-b {
+  grid-area: b;
+}
+
+.element-d {
+  grid-area: d;
+  background-color: white;
+}
+
+.element-g {
+  grid-area: g;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.flex-justify-space {
+  justify-content: space-between;
+}
+
+.flex-justify-center {
+  align-items: center;
+}
+
+.item {
+  flex: 0 1 120px;
+  border: 3px solid black;
+  transition: all 0.5s;
+}
+
+.item:hover {
+  scale: 1.2;
+  background-color: blueviolet;
+}
+
+.item-small {
+  min-width: 30%;
+  height: 60%;
+}
+
+.item-w2 {
+  flex: 0 1 20%;
+}
+
+.item-large {
+  flex-grow: 1;
+}
+
+.item-midle {
+  flex-grow: 0.5;
+}
